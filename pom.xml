@@ -17,11 +17,12 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<module>site</module>
 	</modules>
        <properties>
-                <enforceFailOnUIDependencyInCore>true</enforceFailOnUIDependencyInCore>
+                <enforceFailOnUIDependencyInCore>false</enforceFailOnUIDependencyInCore>
                 <tycho.scmUrl>scm:git:https://github.com/robstryker/jbosstools-smooks.git</tycho.scmUrl>
                 <sonar.test.inclusions>**/*Test.*,**/test/**/*,**/*AllTests*,**/*AllBotTests*,**/*TestSuite*</sonar.test.inclusions>
                 <!-- timeout in seconds; 3000s = 50m -->
-                <surefire.itests.timeout>3000</surefire.itests.timeout>
+		<surefire.itests.timeout>3000</surefire.itests.timeout>
+		<skipBaselineComparison>true</skipBaselineComparison>
         </properties>
         <repositories>
                 <repository>
